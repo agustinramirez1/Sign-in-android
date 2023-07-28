@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="163dp"
+            android:layout_height="46dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Sign in"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_titulo">
+
+        <TextView
+            android:id="@+id/text_correo"
+            style="@style/textView"
+            android:text="Correo Electrónico:" />
+
+        <EditText
+            android:id="@+id/editTextEmailAddress"
+            android:layout_width="352dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutRUC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearCorreo">
+
+        <TextView
+            android:id="@+id/text_ruc"
+            style="@style/textView"
+            android:text="RUC:" />
+
+        <EditText
+            android:id="@+id/editTextRUC"
+            android:layout_width="352dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRUC">
+
+        <TextView
+            android:id="@+id/text_telefono"
+            style="@style/textView"
+            android:text="Teléfono:" />
+
+        <EditText
+            android:id="@+id/editTextTelefono"
+            android:layout_width="352dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTelefono">
+
+        <TextView
+            android:id="@+id/text_sexo"
+            style="@style/textView"
+            android:text="Sexo:" />
+
+        <Spinner
+            android:id="@+id/sexo"
+            android:layout_width="352dp"
+            android:layout_height="43dp"
+            android:entries="@array/sexo_array" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSexo">
+
+        <TextView
+            android:id="@+id/text_estado"
+            style="@style/textView"
+            android:text="Estado Civil:" />
+
+        <Spinner
+            android:id="@+id/estado_civil"
+            android:layout_width="352dp"
+            android:layout_height="43dp"
+            android:entries="@array/estado_array" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEstado">
+
+        <TextView
+            android:id="@+id/text_fecha"
+            style="@style/textView"
+            android:layout_width="wrap_content"
+            android:text="Fecha de Nacimiento: " />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="352dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
